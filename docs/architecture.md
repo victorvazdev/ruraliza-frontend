@@ -15,7 +15,7 @@ Este documento é o mapa do que existe. Detalhes de uso, telas e regras de cada 
 | Mapas | `@angular/google-maps` | A chave vem do backend (`core/maps/google-maps-loader.service.ts`) |
 | Gerenciador | npm 11.19 (`packageManager`) | Há `package-lock.json` |
 
-Dados e persistência ficam no backend (`../ruraliza-backend`), em memória por decisão da equipe: o frontend não tem banco nem ORM. O lint é ESLint com `angular-eslint` (`npm run lint`); o `.prettierrc` existe, mas sem script no `package.json` (ver [quality.md](quality.md)).
+Dados e persistência ficam no backend (`../ruraliza-backend`), em PostgreSQL quando ele tem `DATABASE_URL` e em memória sem ela: o frontend não tem banco nem ORM. O lint é ESLint com `angular-eslint` (`npm run lint`); o `.prettierrc` existe, mas sem script no `package.json` (ver [quality.md](quality.md)).
 
 ## Mapa do código
 

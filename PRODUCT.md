@@ -31,14 +31,14 @@ Fatos observados:
 - **Celular primeiro e uso no campo:** sinal fraco, sol forte. Daí o modo sem internet, o alto contraste e os campos de 16 px.
 - **Menu de baixo de 3 a 5 destinos**, ação principal no meio (`MAX_BOTTOM_NAV_ITEMS`).
 - **Tudo em português do Brasil** (rotas, textos, datas no horário de Brasília). Nomes de componentes em inglês.
-- **Backend com dados em memória, por decisão da equipe** (sem banco por ora): tudo some quando ele reinicia.
+- **Backend com PostgreSQL opcional:** com `DATABASE_URL` os dados continuam depois de reiniciar; sem ela, ficam em memória e somem. Os textos públicos (perguntas frequentes, Termos e Política de Privacidade) ainda descrevem os dados em memória: atualize-os antes de ligar o banco em produção.
 - **Sessão em `sessionStorage`:** vale enquanto a aba está aberta. Reabrir o app sem sinal pede para entrar de novo.
 - **Pagamento é simulado** e **e-mail não existe**: a API nunca devolve o código de redefinição, então em produção o "esqueci a senha" não tem como concluir (`TODO(email)`); em desenvolvimento, o código sai no terminal da API.
 - Os guards só evitam abrir telas sem sessão; quem protege os dados é a API.
 
 ## Fora do escopo (hoje)
 
-Pagamento real, envio de e-mail, banco de dados e fotos em bucket (backend), assinatura digital dos certificados, app nativo, tradução para outros idiomas e a nova identidade visual (só há direção, ver [docs/design.md](docs/design.md#redesign-planejado)).
+Pagamento real, envio de e-mail e fotos em bucket (backend), assinatura digital dos certificados, app nativo, tradução para outros idiomas e a nova identidade visual (só há direção, ver [docs/design.md](docs/design.md#redesign-planejado)).
 
 ## Decisões pendentes
 

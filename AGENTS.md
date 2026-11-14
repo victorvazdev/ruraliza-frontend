@@ -6,7 +6,7 @@ Instruções para agentes de IA. São curtas de propósito: os detalhes estão n
 
 - **Produto e escopo:** [PRODUCT.md](PRODUCT.md). **Telas, fluxos e regras de uso:** [README.md](README.md).
 - **Stack:** Angular 22 (standalone, signals, SSR e pré-renderização), TypeScript 6, npm 11, Vitest via `ng test` e service worker (`ngsw`). O CSS é próprio, com tokens em `src/styles/tokens.css` (sem Tailwind).
-- **API:** `../ruraliza-backend` em http://localhost:3000/api. Os dados ficam em memória lá, por decisão da equipe.
+- **API:** `../ruraliza-backend` em http://localhost:3000/api. Lá os dados ficam em PostgreSQL quando há `DATABASE_URL`; sem ela, em memória.
 - **Mapa:** [docs/architecture.md](docs/architecture.md) (estrutura e decisões), [docs/design.md](docs/design.md) (sistema visual e acessibilidade), [docs/onboarding.md](docs/onboarding.md) (primeira execução), [docs/quality.md](docs/quality.md) (verificações e revisão), [docs/setup.md](docs/setup.md) (ferramentas de agente e evidências).
 
 ## Comandos
